@@ -1,0 +1,54 @@
+:root {
+  /* Font family */
+  --primary-font: "Playfair", serif;
+  --secondary-font: "Poppins", serif;
+
+  /* Color */
+  --font-color: #212326;
+  --white: #fff;
+  --light-gray: #f1f1f1;
+  --light-yellow: #faeaa1;
+  --side-color: #f7eedd;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--primary-font);
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  outline: none;
+}
+
+a:focus {
+  outline: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+}
