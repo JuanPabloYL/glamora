@@ -1,0 +1,41 @@
+.slider {
+  background-image: url("../../public/img/image3.jpg");
+  /* color: var(--white); */
+  background-position: center;
+  padding-top: 20rem;
+  padding-inline: 2rem;
+  padding-bottom: 7rem;
+  text-align: right;
+  height: 45rem;
+}
+
+@media (min-width: 768px) {
+  .slider {
+    padding-inline: 8rem;
+  }
+}
+
+.slider__p {
+  font-size: 2rem;
+}
+
+.slider__h2 {
+  font-size: 3.4rem;
+  font-weight: 800;
+}
+
+@media (min-width: 768px) {
+  .slider__h2 {
+    font-size: 5rem;
+  }
+}
+
+.slider__btn {
+  font-size: 2rem;
+  padding-inline: 2rem;
+  padding-block: 1rem;
+  background-color: var(--white);
+  margin-top: 2rem;
+  font-family: inherit;
+  font-weight: 700;
+}

@@ -52,3 +52,11 @@ a:hover {
 
 a:active {
 }
+
+button {
+  border: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
