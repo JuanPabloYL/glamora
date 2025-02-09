@@ -1,0 +1,36 @@
+.products {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .products {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.products-btns {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .products-btns {
+    display: none;
+  }
+}
+
+.products-btns button {
+  background-color: var(--light-yellow);
+  font-size: 2rem;
+  padding-block: 1rem;
+  font-weight: 700;
+}
+
+.products-number {
+  font-size: 2rem;
+  color: var(--gray);
+  display: inline-block;
+  padding-block: 2rem;
+}
