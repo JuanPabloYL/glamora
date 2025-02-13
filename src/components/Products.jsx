@@ -25,10 +25,10 @@ const filterReducer = (state, action) => {
 export const Products = () => {
   const [products, setProducts] = useState([]);
   const [maxProducts, setMaxProducts] = useState(20);
-  const [state, dispatch] = useReducer(filterReducer, initialState); 
-  
+  const [state, dispatch] = useReducer(filterReducer, initialState);
+
   const [currentPage, setCurrentPage] = useState(1);
-  const productsPerPage = 20; /
+  const productsPerPage = 20;
 
   useEffect(() => {
     const fetchData = async () => {

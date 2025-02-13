@@ -1,0 +1,21 @@
+.footer {
+  margin-top: 5rem;
+  border-top: 1px solid #000;
+  padding-block: 5rem;
+}
+
+.footer__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.footer__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__cr {
+  margin-top: 2rem;
+  text-align: center;
+}
