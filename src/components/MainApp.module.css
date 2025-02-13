@@ -1,0 +1,19 @@
+.introduction {
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.introduction__title {
+  font-size: 3rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.introduction__text {
+  font-size: 2.5rem;
+}
+
+.introduction__extra {
+  margin-top: 1rem;
+  font-size: 2rem;
+}
