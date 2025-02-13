@@ -4,11 +4,16 @@
 
 @media (min-width: 768px) {
   .sidebar {
-    /* top: 0; */
     display: block;
-    position: absolute;
-    padding-left: 3rem;
-    /* height: 10rem; */
-    overflow: auto;
+    /* position: absolute; */
+    /* padding-left: 3rem; */
+    /* overflow: auto; */
+  }
+
+  .sidebar-filter {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.8rem;
   }
 }

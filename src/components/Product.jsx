@@ -4,7 +4,6 @@ import styles from "./Product.module.css";
 
 export const Product = ({ item }) => {
   const { api_featured_image, name, price, brand } = item;
-  console.log(item);
   return (
     <div className={styles["product"]}>
       <div className={styles["product__img-container"]}>

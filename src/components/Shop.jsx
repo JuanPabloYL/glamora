@@ -22,7 +22,6 @@ export const Shop = () => {
       </p>
 
       <div className={styles["products"]}>
-        <Sidebar />
         <Products />
       </div>
     </main>

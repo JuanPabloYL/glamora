@@ -8,6 +8,10 @@
   .products {
     grid-template-columns: repeat(4, 1fr);
   }
+  .products-container {
+    display: flex;
+    gap: 4rem;
+  }
 }
 
 .products-btns {
@@ -33,4 +37,24 @@
   color: var(--gray);
   display: inline-block;
   padding-block: 2rem;
+}
+
+.pagination {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.pagination button {
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  background-color: var(--light-yellow);
+  border-radius: 0.5rem;
+}
+
+.pagination button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
 }

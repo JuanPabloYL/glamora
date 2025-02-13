@@ -1,6 +1,6 @@
 import styles from "./Sidebar.module.css";
 
-const productType = ["Blush", "Bronzer", "Eyebrow", "Eyeliner", "Eyeshadow"];
+const productTypes = ["Blush", "Bronzer", "Eyebrow", "Eyeliner", "Eyeshadow"];
 const brands = [
   "almay",
   "alva",
@@ -12,31 +12,54 @@ const brands = [
   "butter london",
 ];
 
-export const Sidebar = () => {
+export const Sidebar = ({ state, dispatch }) => {
+  // Function to handle radio button change
+  const handleRadioChange = (type, value) => {
+    dispatch({ type, payload: value });
+  };
+
   return (
     <aside className={styles["sidebar"]}>
       <h2>Filters</h2>
-      <div className={styles["sidebar-brand"]}>
-        <div>
-          <h3>Product Type</h3>
-          {productType.map((brand) => (
-            <div key={brand}>
-              <input type="checkbox" name="product-type" />
-              <label>{brand}</label>
-            </div>
-          ))}
-        </div>
 
-        <div>
-          <h3>Brand</h3>
-          {brands.map((brand) => (
-            <div key={brand}>
-              <input type="checkbox" name="product-type" />
-              <label>{brand}</label>
-            </div>
-          ))}
-        </div>
+      {/* Product Type Filter */}
+      <div>
+        <h3>Product Type</h3>
+        {productTypes.map((type) => (
+          <div key={type} className={styles["sidebar-filter"]}>
+            <input
+              type="radio"
+              name="productType"
+              checked={state.productType === type.toLowerCase()}
+              onChange={() =>
+                handleRadioChange("SET_PRODUCT_TYPE", type.toLowerCase())
+              }
+            />
+            <label>{type}</label>
+          </div>
+        ))}
       </div>
+
+      {/* Brand Filter */}
+      <div>
+        <h3>Brand</h3>
+        {brands.map((brand) => (
+          <div key={brand} className={styles["sidebar-filter"]}>
+            <input
+              type="radio"
+              name="brand"
+              checked={state.brand === brand.toLowerCase()}
+              onChange={() =>
+                handleRadioChange("SET_BRAND", brand.toLowerCase())
+              }
+            />
+            <label>{brand}</label>
+          </div>
+        ))}
+      </div>
+
+      {/* Reset Filters Button */}
+      <button onClick={() => dispatch({ type: "RESET" })}>Reset Filters</button>
     </aside>
   );
 };
