@@ -4,6 +4,7 @@ import { CgFacebook, CgTwitter, CgInstagram } from "react-icons/cg";
 
 import styles from "./Navigation.module.css";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export const Navigation = () => {
   const [openModal, setOpenModal] = useState(true);
@@ -34,11 +35,11 @@ export const Navigation = () => {
       >
         <nav className={styles["navigation__nav"]}>
           <div className={styles["navigation__links"]}>
-            <a href="#">Brands</a>
-            <a href="#">Skincare</a>
-            <a href="#">HairCare</a>
-            <a href="#">BodyCare</a>
-            <a href="#">Explore</a>
+            <Link to={`/`}>Home</Link>
+            <Link to={`/blush`}>Blush</Link>
+            <Link to={`/bronzer`}>Bronzer</Link>
+            <Link to={`/eyebrow`}>Eyebrow</Link>
+            <Link to={`/explore`}>Explore</Link>
           </div>
 
           <div className={styles["navigation__user-actions"]}>

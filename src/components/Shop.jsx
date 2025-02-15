@@ -3,27 +3,19 @@ import { useEffect, useState } from "react";
 import styles from "./Shop.module.css";
 import { Sidebar } from "./Sidebar";
 import { Products } from "./Products";
+import { MainTemplate } from "./MainTemplate";
 
-export const Shop = () => {
+const text =
+  "Explore the world of skincare with products designed to unlock your skin’s natural radiance. Our carefully curated range helps you discover new ways to nourish and hydrate, ensuring your skin is perfectly prepped to absorb all the enriching ingredients it needs for a glowing, healthy appearance.";
+
+const title = "Explore";
+
+export const Shop = ({ children }) => {
   const [filter, setFilters] = useState({});
 
   return (
-    <main className={styles.shop}>
-      <div className={styles["shop__bg"]}>
-        <div className={`${styles["shop__title-container"]}`}>
-          <h2>Skincare</h2>
-        </div>
-      </div>
-      <p className={`container ${styles["shop__description"]}`}>
-        Proper cleansing is the first step to healthy, radiant skin. Our
-        carefully formulated cleansers and toners gently remove impurities while
-        maintaining your skin’s natural pH and hydration, ensuring it’s
-        perfectly prepped to absorb nourishing ingredients.
-      </p>
-
-      <div className={styles["products"]}>
-        <Products />
-      </div>
-    </main>
+    <MainTemplate text={text} title={title}>
+      <Products apiURL="http://makeup-api.herokuapp.com/api/v1/products.json" />
+    </MainTemplate>
   );
 };

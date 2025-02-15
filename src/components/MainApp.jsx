@@ -1,5 +1,7 @@
+import { Features } from "./Features";
 import { Header } from "./Header";
 import styles from "./MainApp.module.css";
+import { Media } from "./Media";
 
 export const MainApp = () => {
   return (
@@ -18,6 +20,9 @@ export const MainApp = () => {
           ✨ Everyone needs a Iil' Buttah – baby ✨
         </p>
       </section>
+
+      <Media />
+      <Features />
     </>
   );
 };

@@ -1,0 +1,50 @@
+.media__container {
+  background-image: url("../../public/img/image2.jpg");
+  background-position: center;
+  padding-block: 5rem;
+  font-size: 2rem;
+  font-weight: 500;
+
+  display: flex;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .media__container {
+    font-size: 2.2rem;
+    padding-block: 0rem;
+  }
+}
+
+.media__image {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .media {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .media__image {
+    display: block;
+  }
+}
+
+.media__span {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.media h2 {
+  font-size: 3.5rem;
+  font-weight: 900;
+}
+
+.media__link {
+  display: inline-block;
+  margin-top: 2rem;
+  background-color: var(--white);
+  font-weight: 700;
+  padding: 1rem 2rem;
+}
