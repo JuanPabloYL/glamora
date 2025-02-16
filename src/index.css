@@ -1,7 +1,8 @@
 :root {
   /* Font family */
-  --primary-font: "Playfair", serif;
-  --secondary-font: "Poppins", serif;
+  /* --primary-font: "Playfair", serif; */
+  --primary-font: "Poppins", serif;
+  /* --secondary-font: "Poppins", serif; */
 
   /* Color */
   --font-color: #212326;

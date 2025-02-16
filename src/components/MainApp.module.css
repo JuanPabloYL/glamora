@@ -18,3 +18,61 @@
   margin-top: 1rem;
   font-size: 2rem;
 }
+
+/* references */
+.references {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10rem;
+  gap: 5rem;
+}
+
+.references__container {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 4rem;
+}
+
+.references__container-2 {
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .references__container {
+    flex-direction: row;
+  }
+}
+
+.reference__content {
+  padding-inline: 2rem;
+  font-size: 2rem;
+  line-height: 2;
+  flex: 1;
+}
+
+.reference__img {
+  flex: 1;
+}
+
+.reference__img img {
+  height: 40rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.reference__title span {
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+.reference__title h2 {
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.reference__btn {
+  display: inline-block;
+  margin-top: 2rem;
+  background-color: var(--light-yellow);
+  padding: 1rem 2rem;
+}
