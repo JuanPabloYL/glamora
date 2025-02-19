@@ -34,4 +34,22 @@
 }
 
 .product__description {
+  padding-block: 2rem;
+  padding-inline: 2rem;
+  line-height: 2;
+}
+
+.product__name {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.product__description span {
+  font-weight: bold;
+}
+
+/* LOADING */
+.products-loading {
+  display: flex;
+  flex-direction: row;
 }

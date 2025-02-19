@@ -21,6 +21,7 @@ export const useFetchProducts = (
   const [products, setProducts] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [state, dispatch] = useReducer(filterReducer, initialFilters);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -34,9 +35,11 @@ export const useFetchProducts = (
       }
 
       try {
+        setLoading(true);
         const response = await fetch(url);
         const data = await response.json();
         setProducts(data);
+        setLoading(false);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -71,5 +74,6 @@ export const useFetchProducts = (
     prevPage,
     dispatch,
     state,
+    loading,
   };
 };

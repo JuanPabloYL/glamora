@@ -13,8 +13,8 @@ export const Product = ({ item }) => {
         </div>
       </div>
       <div className={styles["product__description"]}>
-        <p>{brand}</p>
-        <p>{name}</p>
+        <p className={styles["product__brand"]}>{brand}</p>
+        <p className={styles["product__name"]}>{name}</p>
         <span>${price}</span>
       </div>
     </div>

@@ -59,7 +59,12 @@ export const Sidebar = ({ state, dispatch }) => {
       </div>
 
       {/* Reset Filters Button */}
-      <button onClick={() => dispatch({ type: "RESET" })}>Reset Filters</button>
+      <button
+        className={styles["sidebar-reset"]}
+        onClick={() => dispatch({ type: "RESET" })}
+      >
+        Reset Filters
+      </button>
     </aside>
   );
 };
