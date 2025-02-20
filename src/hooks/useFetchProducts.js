@@ -19,6 +19,7 @@ export const useFetchProducts = (
   productsPerPage = 20
 ) => {
   const [products, setProducts] = useState([]);
+  const [searchQuery, setSearchQuery] = useState(""); // New state for search
   const [currentPage, setCurrentPage] = useState(1);
   const [state, dispatch] = useReducer(filterReducer, initialFilters);
   const [loading, setLoading] = useState(true);
@@ -48,14 +49,20 @@ export const useFetchProducts = (
     fetchData();
   }, [state, baseUrl]);
 
+  const filteredProducts = searchQuery
+    ? products.filter((product) =>
+        product.name.toLowerCase().includes(searchQuery.toLowerCase())
+      )
+    : products;
+
   // Pagination logic
   const indexOfLastProduct = currentPage * productsPerPage;
   const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
-  const currentProducts = products.slice(
+  const currentProducts = filteredProducts.slice(
     indexOfFirstProduct,
     indexOfLastProduct
   );
-  const totalPages = Math.ceil(products.length / productsPerPage);
+  const totalPages = Math.ceil(filteredProducts.length / productsPerPage);
 
   const nextPage = () => {
     if (currentPage < totalPages) setCurrentPage(currentPage + 1);
@@ -67,7 +74,7 @@ export const useFetchProducts = (
 
   return {
     products: currentProducts,
-    totalProducts: products.length,
+    totalProducts: filteredProducts.length,
     currentPage,
     totalPages,
     nextPage,
@@ -75,5 +82,7 @@ export const useFetchProducts = (
     dispatch,
     state,
     loading,
+    searchQuery,
+    setSearchQuery,
   };
 };

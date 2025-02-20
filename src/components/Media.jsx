@@ -16,7 +16,7 @@ export const Media = () => {
         </div>
       </div>
       <div className={`${styles["media__image"]}`}>
-        <img src="../../public/img/image1.jpg" alt="Makeup" />
+        <img src="/glamora/img/image1.jpg" alt="Makeup" />
       </div>
     </div>
   );

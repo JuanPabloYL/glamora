@@ -8,7 +8,6 @@ import { Link } from "react-router-dom";
 
 export const Navigation = () => {
   const [openModal, setOpenModal] = useState(true);
-  console.log(openModal);
 
   return (
     <div className={styles.navigation}>

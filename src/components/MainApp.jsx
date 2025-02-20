@@ -45,14 +45,14 @@ export const MainApp = () => {
             </Link>
           </div>
           <div className={`${styles["reference__img"]}`}>
-            <img src="../../public/img/model1.jpg" alt="Makeup" />
+            <img src="/glamora/img/model1.jpg" alt="Makeup" />
           </div>
         </div>
         <div
           className={`${styles["references__container"]} ${styles["references__container-2"]}`}
         >
           <div className={`${styles["reference__img"]}`}>
-            <img src="../../public/img/model2.jpg" alt="Makeup" />
+            <img src="/glamora/img/model2.jpg" alt="Makeup" />
           </div>
           <div className={`${styles["reference__content"]}`}>
             <div className={`${styles["reference__title"]}`}>
