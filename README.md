@@ -18,7 +18,6 @@ This project is built using the following technologies:
 - **HTML5 & CSS3**: For structuring and styling the pages.
 - **JavaScript**: Implementing interactive elements like product filtering, search, and the shopping cart.
 - **React**: For dynamic components and an enhanced user interface.
-- **TailwindCSS**: A utility-first CSS framework used for designing modern layouts.
 - **LocalStorage**: For handling the shopping cart and product information on the client side.
 - **API Integration**: Integrated with the [Makeup API](https://makeup-api.herokuapp.com/) to fetch real-time product data.
 
@@ -63,13 +62,4 @@ This project is deployed on [Netlify](https://www.netlify.com) for fast and reli
 
 - The layout and user interface are designed to be intuitive and user-friendly.
 - React is used for creating reusable components and managing the state, especially for the shopping cart.
-- TailwindCSS enables me to quickly design a responsive, modern-looking interface.
 - The Makeup API is used to fetch makeup product data, such as product names, descriptions, prices, and images.
-
-## 📞 Contact
-
-If you'd like to reach out for collaborations or inquiries, feel free to contact me through [LinkedIn](https://www.linkedin.com/in/yourprofile) or via email at `your.email@example.com`.
-
----
-
-Thank you for exploring **Glamora**! I hope you enjoy the experience and the makeup products featured on the site.
